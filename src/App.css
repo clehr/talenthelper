@@ -4,4 +4,8 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
 }
