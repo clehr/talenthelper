@@ -8,6 +8,13 @@ function App() {
   return (
     <div className="app">
 
+      <label for="usecase">What do you want to do?:</label>
+      <select id="usecase">
+        <option value="Mythic">Mythic</option>
+        <option value="Raid">Raid</option>
+        <option value="PvP">Warrior</option>
+      </select>
+
       <label for="class">Your class:</label>
       <select id="class">
         <option value="Monk">Monk</option>
