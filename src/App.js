@@ -34,7 +34,7 @@ function App() {
 
       <button>
         <a href={dungeonUrl} target="_blank" rel="noopener noreferrer">
-          show me my spec!
+          Tell me how to skill!
         </a>
       </button>
 
