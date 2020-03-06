@@ -43,3 +43,8 @@ button {
 button:hover {
   background-color: #00aeff;
 }
+
+h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}

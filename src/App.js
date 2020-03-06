@@ -8,6 +8,8 @@ function App() {
   return (
     <div className="app">
 
+      <h3>Hey there!</h3>
+
       <label for="usecase">What do you want to do?:</label>
       <select id="usecase">
         <option value="Mythic">Mythic</option>
