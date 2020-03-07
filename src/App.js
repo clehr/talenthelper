@@ -24,11 +24,7 @@ export default class App extends React.Component {
         </div>
         <div className="black-section">
           <div>
-            <h3>Hey there!</h3>
-          </div>
-
-          <div>
-            <label htmlFor="usecase">What do you want to do?:</label>
+            <p htmlFor="usecase">Choose:</p>
             <select id="usecase">
               <option value="Mythic">Mythic</option>
               <option value="Raid">Raid</option>
@@ -37,7 +33,7 @@ export default class App extends React.Component {
           </div>
 
           <div>
-            <label htmlFor="class">Your class:</label>
+            <p htmlFor="class">Your class:</p>
             <select id="class" onChange={this.changeClass}>
               <option value="Monk">Monk</option>
               <option value="Warlock">Warlock</option>
@@ -47,7 +43,7 @@ export default class App extends React.Component {
           </div>
 
           <div>
-            <label htmlFor="spec">Your spec:</label>
+            <p htmlFor="spec">Your spec:</p>
             <select id="spec" onChange={this.changeSpec}>
               <option value="Mistweaver">Mistweaver</option>
               <option value="Brewmaster">Brewmaster</option>

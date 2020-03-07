@@ -51,11 +51,21 @@ button:hover {
   background-color: #00aeff;
 }
 
-h3 {
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
 img {
   width: 25%;
+}
+
+p {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(top,#ede0c9 20%,#8a7e66);
+  background-size: 1.3em 1.3em;
+  background-position: top;
+  color: #ede0c9;
+  line-height: 1.3em;
+  text-shadow: none;
+  position: relative;
+  text-transform: uppercase;
 }
