@@ -82,7 +82,11 @@ p {
   color: #000;
   text-transform: uppercase;
   margin-bottom: -10px;
-  }
+}
+
+.Button-outer {
+  width: 167px;
+}
 
 .Button-inner {
   line-height: 20px;
@@ -97,8 +101,8 @@ p {
 
 .Button-inner:hover {
   background-position: center;
-  line-height: 16px;
-  margin-bottom: 4px;
+  line-height: 18px;
+  margin-bottom: 2px;
 }
 
 .Button-inner:before {
