@@ -53,10 +53,10 @@ export default class App extends React.Component {
 
           <div>
 
-            <a className="Link Link--external Button Button--ocho" href={dungeonUrl}
-            ><div className="Button-outer">
+            <a className="Link Link--external Button Button--ocho" href={dungeonUrl}>
+              <div className="Button-outer">
                 <div className="Button-inner">
-                  <div className="Button-label" data-text="Zum Shop">
+                  <div className="Button-label">
                     Show talents
                   </div>
                 </div>
