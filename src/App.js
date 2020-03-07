@@ -55,7 +55,7 @@ export default class App extends React.Component {
             <button>
               <a href={dungeonUrl} target="_blank" rel="noopener noreferrer">
                 Tell me how to skill!
-          </a>
+              </a>
             </button>
           </div>
         </div>
