@@ -7,6 +7,10 @@ export default class App extends React.Component {
     this.state = { class: 'Warrior', spec: 'Fury' };
   }
 
+  changeClass = (event) => this.setState({ class: event.target.value });
+
+  changeSpec = (event) => this.setState({ spec: event.target.value });
+
   render() {
     const wowClass = this.state.class;
     const spec = this.state.spec;
@@ -34,7 +38,7 @@ export default class App extends React.Component {
 
           <div>
             <label htmlFor="class">Your class:</label>
-            <select id="class">
+            <select id="class" onChange={this.changeClass}>
               <option value="Monk">Monk</option>
               <option value="Warlock">Warlock</option>
               <option value="Warrior">Warrior</option>
@@ -44,7 +48,7 @@ export default class App extends React.Component {
 
           <div>
             <label htmlFor="spec">Your spec:</label>
-            <select id="spec">
+            <select id="spec" onChange={this.changeSpec}>
               <option value="Mistweaver">Mistweaver</option>
               <option value="Brewmaster">Brewmaster</option>
               <option value="Windwalker">Windwalker</option>
