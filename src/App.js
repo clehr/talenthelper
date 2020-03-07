@@ -2,10 +2,15 @@ import React from 'react';
 import './App.css';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { class: 'Warrior', spec: 'Fury' };
+  }
 
   render() {
-    const spec = 'Mistweaver';
-    const wowClass = 'Monk';
+    const wowClass = this.state.class;
+    const spec = this.state.spec;
+
     const dungeonUrl = "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + wowClass + "&spec=" + spec + "&region=2";
 
     return (
