@@ -57,6 +57,10 @@ export default class App extends React.Component {
                 Tell me how to skill!
               </a>
             </button>
+
+            <a className="Link Link--external Button Button--ocho" href="https://shop.battle.net/product/world-of-warcraft-battle-for-azeroth?utm_source=wow&amp;utm_medium=referral&amp;utm_campaign=bfa&amp;utm_content=bot" data-analytics="wow8-buy" data-analytics-placement="Bottom - Digital Deluxe Edition"><div className="Button-outer"><div className="Button-inner"><div className="Button-label" data-text="Zum Shop">Zum Shop</div></div></div></a>
+
+
           </div>
         </div>
       </div>
