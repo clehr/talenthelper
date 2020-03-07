@@ -93,7 +93,7 @@ p {
   position: relative;
   max-width: 367px;
   white-space: nowrap;
-  }
+}
 
   .Button-inner:before {
     content: "";
@@ -121,4 +121,12 @@ p {
   left: 100%;
   background-position: right 0;
   margin-left: -36px;
-  }
+}
+
+.Button-inner:hover::before {
+  background-position: right;
+}
+
+.Button-inner:hover::after {
+  background-position: right;
+}
