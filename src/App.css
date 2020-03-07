@@ -95,22 +95,13 @@ p {
   white-space: nowrap;
 }
 
-  .Button-inner:before {
-    content: "";
-    background: url(./images/button.png) no-repeat;
-    background-size: auto 300px;
-    width: 133px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    background-position: right 0;
-    margin-right: -36.25px;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+.Button-inner:hover {
+  background-position: center;
+  line-height: 16px;
+  margin-bottom: 4px;
 }
 
-.Button-inner:after {
+.Button-inner:before {
   content: "";
   background: url(./images/button.png) no-repeat;
   background-size: auto 300px;
@@ -118,15 +109,30 @@ p {
   height: 100px;
   position: absolute;
   top: 0;
-  left: 100%;
+  right: 100%;
   background-position: right 0;
-  margin-left: -36px;
+  margin-right: -36.25px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.Button-inner:after {
+content: "";
+background: url(./images/button.png) no-repeat;
+background-size: auto 300px;
+width: 133px;
+height: 100px;
+position: absolute;
+top: 0;
+left: 100%;
+background-position: right 0;
+margin-left: -36px;
 }
 
 .Button-inner:hover::before {
-  background-position: right;
+background-position: right;
 }
 
 .Button-inner:hover::after {
-  background-position: right;
+background-position: right;
 }
