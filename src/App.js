@@ -53,7 +53,7 @@ export default class App extends React.Component {
 
           <div>
 
-            <a className="Link Button Button--ocho" href={dungeonUrl}>
+            <a className="Link Button Button--ocho" href={dungeonUrl} target="_blank" rel="noopener noreferrer">
               <div className="Button-outer">
                 <div className="Button-inner">
                   <div className="Button-label">
