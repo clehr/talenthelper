@@ -84,7 +84,7 @@ p {
   margin-bottom: -10px;
   }
 
-.Button--ocho .Button-inner {
+.Button-inner {
   line-height: 20px;
   padding: 35px 0 45px;
   background: url(./images/button.png) no-repeat;
@@ -95,7 +95,7 @@ p {
   white-space: nowrap;
   }
 
-  .Button--ocho .Button-inner:before {
+  .Button-inner:before {
     content: "";
     background: url(./images/button.png) no-repeat;
     background-size: auto 300px;
@@ -110,7 +110,7 @@ p {
     transform: scaleX(-1);
 }
 
-.Button--ocho .Button-inner:after {
+.Button-inner:after {
   content: "";
   background: url(./images/button.png) no-repeat;
   background-size: auto 300px;
