@@ -8,6 +8,8 @@ function App() {
   return (
     <div className="app">
 
+      <img className="logo" src="https://vignette.wikia.nocookie.net/wowwiki/images/5/5e/New_WorldOfWarcraft_logo_large.png/revision/latest?cb=20131220175833" />
+
       <h3>Hey there!</h3>
 
       <label for="usecase">What do you want to do?:</label>
