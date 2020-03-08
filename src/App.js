@@ -25,8 +25,9 @@ export default class App extends React.Component {
         </div>
         <div className="black-section">
           <div>
-            <p htmlFor="usecase">Choose:</p>
+            <p htmlFor="usecase">Mode:</p>
             <select id="usecase">
+              <option selected disabled>Choose your mode</option>
               <option value="Mythic">Mythic+</option>
               <option value="Raid">Raid</option>
             </select>
@@ -35,6 +36,7 @@ export default class App extends React.Component {
           <div>
             <p htmlFor="class">Your class:</p>
             <select id="class" onChange={this.changeClass}>
+              <option selected disabled>Choose your class</option>
               {
                 classNames.map((className) =>
                   <option key={className.name} value={className.name}>{className.name}</option>
@@ -46,6 +48,7 @@ export default class App extends React.Component {
           <div>
             <p htmlFor="spec">Your spec:</p>
             <select id="spec" onChange={this.changeSpec}>
+              <option selected disabled>Choose your spec</option>
               {classNames.map((className) =>
                 className.specs
                   .filter(() => className.name === this.state.class)
