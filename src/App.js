@@ -5,15 +5,16 @@ import { classNames } from './wowClasses';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+    this.specRef = React.createRef();
     this.state = { class: null, spec: null, urlToOpen: null, mode: null };
   }
 
   changeUrlToOpen = () => {
     if (this.state.mode === 'MythicPlus') {
-      this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + this.state.class + "&spec=" + this.state.spec + "&leaderboards=1&region=2" })
+      this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + this.state.class + "&spec=" + this.specRef.current.value + "&leaderboards=1&region=2" })
       return;
     }
-    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=" + this.state.class + "&boss=0&region=2&spec=" + this.state.spec });
+    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=" + this.state.class + "&boss=0&region=2&spec=" + this.specRef.current.value });
   }
 
   changeClass = (event) => {
@@ -57,7 +58,7 @@ export default class App extends React.Component {
           {this.state.class !== null &&
             <div>
               <p htmlFor="spec">Your spec:</p>
-              <select id="spec" onChange={this.changeSpec}>
+              <select ref={this.specRef} id="spec" onChange={this.changeSpec}>
                 <option selected disabled>Choose your spec</option>
                 {classNames.map((className) =>
                   className.specs
