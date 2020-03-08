@@ -45,6 +45,7 @@ export default class App extends React.Component {
           <div>
             <p htmlFor="spec">Your spec:</p>
             <select id="spec" onChange={this.changeSpec}>
+
               <option value={classesAndSpecs.monk.specs[0]}>{classesAndSpecs.monk.specs[0]}</option>
               <option value={classesAndSpecs.monk.specs[1]}>{classesAndSpecs.monk.specs[1]}</option>
               <option value={classesAndSpecs.monk.specs[2]}>{classesAndSpecs.monk.specs[2]}</option>
