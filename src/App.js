@@ -13,7 +13,7 @@ export default class App extends React.Component {
       this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + this.state.class + "&spec=" + this.state.spec + "&leaderboards=1&region=2" })
       return;
     }
-    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=Monk&boss=0&region=2&spec=Mistweaver" });
+    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=+" + this.state.class + "&boss=0&region=2&spec=" + this.state.spec });
   }
 
   changeClass = (event) => {
