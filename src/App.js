@@ -46,7 +46,12 @@ export default class App extends React.Component {
           <div>
             <p htmlFor="spec">Your spec:</p>
             <select id="spec" onChange={this.changeSpec}>
-              {classNames.map((className) => className.specs.map((spec) => <option key={spec} value={spec}>{spec}</option>))}
+              {classNames.map((className) =>
+                className.specs
+                  .filter(() => className.name === this.state.class)
+                  .map((spec) =>
+                    <option key={spec} value={spec}>{spec}</option>
+                  ))}
             </select>
           </div>
 
