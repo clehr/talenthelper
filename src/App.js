@@ -6,15 +6,16 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.specRef = React.createRef();
+    this.classRef = React.createRef();
     this.state = { class: null, spec: null, urlToOpen: null, mode: null };
   }
 
   changeUrlToOpen = () => {
     if (this.state.mode === 'MythicPlus') {
-      this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + this.state.class + "&spec=" + this.specRef.current.value + "&leaderboards=1&region=2" })
+      this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + this.classRef.current.value + "&spec=" + this.specRef.current.value + "&leaderboards=1&region=2" })
       return;
     }
-    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=" + this.state.class + "&boss=0&region=2&spec=" + this.specRef.current.value });
+    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=" + this.classRef.current.value + "&boss=0&region=2&spec=" + this.specRef.current.value });
   }
 
   changeClass = (event) => {
@@ -45,7 +46,7 @@ export default class App extends React.Component {
 
           <div>
             <p htmlFor="class">Your class:</p>
-            <select id="class" onChange={this.changeClass}>
+            <select ref={this.classRef} id="class" onChange={this.changeClass}>
               <option selected disabled>Choose your class</option>
               {
                 classNames.map((className) =>
