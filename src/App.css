@@ -58,6 +58,7 @@ img {
 p {
   font-weight: 700;
   margin-bottom: 1rem;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-linear-gradient(top,#ede0c9 20%,#8a7e66);
