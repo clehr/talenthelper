@@ -5,19 +5,30 @@ import { classNames } from './wowClasses';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { class: null, spec: null };
+    this.state = { class: null, spec: null, urlToOpen: null, mode: null };
   }
 
-  changeClass = (event) => this.setState({ class: event.target.value });
+  changeUrlToOpen = () => {
+    if (this.state.mode === 'MythicPlus') {
+      this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + this.state.class + "&spec=" + this.state.spec + "&leaderboards=1&region=2" })
+      return;
+    }
+    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=Monk&boss=0&region=2&spec=Mistweaver" });
+  }
 
-  changeSpec = (event) => this.setState({ spec: event.target.value });
+  changeClass = (event) => {
+    this.setState({ class: event.target.value });
+    this.changeUrlToOpen();
+  }
+
+  changeSpec = (event) => {
+    this.setState({ spec: event.target.value });
+    this.changeUrlToOpen();
+  }
+
+  changeMode = (event) => this.setState({ mode: event.target.value });
 
   render() {
-    const wowClass = this.state.class;
-    const spec = this.state.spec;
-
-    const dungeonUrl = "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + wowClass + "&spec=" + spec + "&leaderboards=1&region=2";
-
     return (
       <div>
         <div>
@@ -26,9 +37,9 @@ export default class App extends React.Component {
         <div className="black-section">
           <div>
             <p htmlFor="usecase">Mode:</p>
-            <select id="usecase">
+            <select id="usecase" onChange={this.changeMode}>
               <option selected disabled>Choose your mode</option>
-              <option value="Mythic">Mythic+</option>
+              <option value="MythicPlus">Mythic+</option>
               <option value="Raid">Raid</option>
             </select>
           </div>
@@ -62,7 +73,7 @@ export default class App extends React.Component {
 
           <div>
 
-            <a className="Link Button Button--ocho" href={dungeonUrl} target="_blank" rel="noopener noreferrer">
+            <a className="Link Button Button--ocho" href={this.state.urlToOpen} target="_blank" rel="noopener noreferrer">
               <div className="Button-outer">
                 <div className="Button-inner">
                   <div className="Button-label">
