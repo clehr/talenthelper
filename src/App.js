@@ -13,17 +13,15 @@ export default class App extends React.Component {
       this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + this.state.class + "&spec=" + this.state.spec + "&leaderboards=1&region=2" })
       return;
     }
-    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=+" + this.state.class + "&boss=0&region=2&spec=" + this.state.spec });
+    this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/24#metric=hps&class=" + this.state.class + "&boss=0&region=2&spec=" + this.state.spec });
   }
 
   changeClass = (event) => {
     this.setState({ class: event.target.value });
-    this.changeUrlToOpen();
   }
 
   changeSpec = (event) => {
     this.setState({ spec: event.target.value });
-    this.changeUrlToOpen();
   }
 
   changeMode = (event) => this.setState({ mode: event.target.value });
@@ -73,7 +71,7 @@ export default class App extends React.Component {
 
           <div>
 
-            <a className="Link Button Button--ocho" href={this.state.urlToOpen} target="_blank" rel="noopener noreferrer">
+            <a className="Link Button Button--ocho" onClick={this.changeUrlToOpen} href={this.state.urlToOpen} target="_blank" rel="noopener noreferrer">
               <div className="Button-outer">
                 <div className="Button-inner">
                   <div className="Button-label">
