@@ -37,7 +37,7 @@ export default class App extends React.Component {
             <select id="class" onChange={this.changeClass}>
               {
                 classNames.map((className) =>
-                  <option value={className.name}>{className.name}</option>
+                  <option key={className.name} value={className.name}>{className.name}</option>
                 )
               }
             </select>
@@ -46,7 +46,7 @@ export default class App extends React.Component {
           <div>
             <p htmlFor="spec">Your spec:</p>
             <select id="spec" onChange={this.changeSpec}>
-              {classNames.map((className) => className.specs.map((spec) => <option value={spec}>{spec}</option>))}
+              {classNames.map((className) => className.specs.map((spec) => <option key={spec} value={spec}>{spec}</option>))}
             </select>
           </div>
 
