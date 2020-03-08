@@ -7,11 +7,12 @@ export default class App extends React.Component {
     super(props);
     this.specRef = React.createRef();
     this.classRef = React.createRef();
+    this.modeRef = React.createRef();
     this.state = { class: null, spec: null, urlToOpen: null, mode: null };
   }
 
   changeUrlToOpen = () => {
-    if (this.state.mode === 'MythicPlus') {
+    if (this.modeRef.current.value === 'MythicPlus') {
       this.setState({ urlToOpen: "https://www.warcraftlogs.com/zone/rankings/20#metric=playerscore&class=" + this.classRef.current.value + "&spec=" + this.specRef.current.value + "&leaderboards=1&region=2" })
       return;
     }
@@ -37,8 +38,7 @@ export default class App extends React.Component {
         <div className="black-section">
           <div>
             <p htmlFor="usecase">Mode:</p>
-            <select id="usecase" onChange={this.changeMode}>
-              <option selected disabled>Choose your mode</option>
+            <select ref={this.modeRef} id="usecase" onChange={this.changeMode}>
               <option value="MythicPlus">Mythic+</option>
               <option value="Raid">Raid</option>
             </select>
