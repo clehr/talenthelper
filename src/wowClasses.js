@@ -12,9 +12,10 @@ export const classNames = [
     { name: "Mage", specs: ["Arcane", "Fire", "Frost"] },
     { name: "Paladin", specs: ["Holy", "Retribution", "Protection"] },
     { name: "Death Knight", specs: ["Unholy", "Frost", "Blood"] },
-    { name: "Rogue", specs: ["Subtley", "Assasin", "Windwalker"] },
-    { name: "Hunter", specs: ["Beastmaster", "Survival", "Marksman"] },
-    { name: "Priest", specs: ["Shadow", "Holy", "Disciplin"] },
-    { name: "Druid", specs: ["Feral", "Tank", "Heal"] },
-    { name: "Shaman", specs: ["Heal", "Elemental", "Enhancement"] },
+    { name: "Rogue", specs: ["Subtlety", "Assasination", "Outlaw"] },
+    { name: "Hunter", specs: ["Beast Mastery", "Survival", "Marksmanship"] },
+    { name: "Priest", specs: ["Shadow", "Holy", "Disciplin", "Healing"] },
+    { name: "Druid", specs: ["Feral", "Guardian", "Restoration", "Balance"] },
+    { name: "Shaman", specs: ["Restoration", "Elemental", "Enhancement"] },
+    { name: "Demon Hunter", specs: ["Vengeance", "Havoc"] }
 ];
