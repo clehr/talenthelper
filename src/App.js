@@ -8,7 +8,7 @@ export default class App extends React.Component {
     this.specRef = React.createRef();
     this.classRef = React.createRef();
     this.modeRef = React.createRef();
-    this.state = { class: null, spec: null, urlToOpen: null, mode: null };
+    this.state = { class: null, urlToOpen: null };
   }
 
   changeUrlToOpen = () => {
@@ -23,12 +23,6 @@ export default class App extends React.Component {
     this.setState({ class: event.target.value });
   }
 
-  changeSpec = (event) => {
-    this.setState({ spec: event.target.value });
-  }
-
-  changeMode = (event) => this.setState({ mode: event.target.value });
-
   render() {
     return (
       <div>
@@ -38,7 +32,7 @@ export default class App extends React.Component {
         <div className="black-section">
           <div>
             <p htmlFor="usecase">Mode:</p>
-            <select ref={this.modeRef} id="usecase" onChange={this.changeMode}>
+            <select ref={this.modeRef} id="usecase">
               <option value="MythicPlus">Mythic+</option>
               <option value="Raid">Raid</option>
             </select>
@@ -59,7 +53,7 @@ export default class App extends React.Component {
           {this.state.class !== null &&
             <div>
               <p htmlFor="spec">Your spec:</p>
-              <select ref={this.specRef} id="spec" onChange={this.changeSpec}>
+              <select ref={this.specRef} id="spec">
                 <option selected disabled>Choose your spec</option>
                 {classNames.map((className) =>
                   className.specs
