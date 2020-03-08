@@ -28,7 +28,6 @@ export default class App extends React.Component {
             <select id="usecase">
               <option value="Mythic">Mythic</option>
               <option value="Raid">Raid</option>
-              <option value="PvP">Warrior</option>
             </select>
           </div>
 
