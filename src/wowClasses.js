@@ -1,10 +1,3 @@
-export const classesAndSpecs = {
-    monk: {
-        className: "Monk",
-        specs: ["Mistweaver", "Brewmaster", "Windwalker"]
-    }
-}
-
 export const classNames = [
     { name: "Monk", specs: ["Mistweaver", "Brewmaster", "Windwalker"] },
     { name: "Warrior", specs: ["Fury", "Arms", "Protection"] },
