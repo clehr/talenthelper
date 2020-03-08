@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { classesAndSpecs } from './wowClasses';
+import { classesAndSpecs, classNames } from './wowClasses';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -35,10 +35,10 @@ export default class App extends React.Component {
           <div>
             <p htmlFor="class">Your class:</p>
             <select id="class" onChange={this.changeClass}>
-              <option value="Monk">{classesAndSpecs.monk.className}</option>
-              <option value="Warlock">Warlock</option>
-              <option value="Warrior">Warrior</option>
-              <option value="Mage">Mage</option>
+              {
+                classNames.map((className) =>
+                  <option value={className}>{className}</option>)
+              }
             </select>
           </div>
 
