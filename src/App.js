@@ -37,7 +37,7 @@ export default class App extends React.Component {
             <select id="class" onChange={this.changeClass}>
               {
                 classNames.map((className) =>
-                  <option value={className}>{className}</option>)
+                  <option value={className.name}>{className.name}</option>)
               }
             </select>
           </div>
