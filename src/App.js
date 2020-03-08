@@ -54,7 +54,6 @@ export default class App extends React.Component {
             <div>
               <p htmlFor="spec">Your spec:</p>
               <select ref={this.specRef} id="spec">
-                <option selected disabled>Choose your spec</option>
                 {classNames.map((className) =>
                   className.specs
                     .filter(() => className.name === this.state.class)
