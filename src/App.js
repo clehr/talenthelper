@@ -5,7 +5,7 @@ import { classNames } from './wowClasses';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { class: 'Monk', spec: 'Mistweaver' };
+    this.state = { class: null, spec: null };
   }
 
   changeClass = (event) => this.setState({ class: event.target.value });
@@ -45,18 +45,20 @@ export default class App extends React.Component {
             </select>
           </div>
 
-          <div>
-            <p htmlFor="spec">Your spec:</p>
-            <select id="spec" onChange={this.changeSpec}>
-              <option selected disabled>Choose your spec</option>
-              {classNames.map((className) =>
-                className.specs
-                  .filter(() => className.name === this.state.class)
-                  .map((spec) =>
-                    <option key={spec} value={spec}>{spec}</option>
-                  ))}
-            </select>
-          </div>
+          {this.state.class !== null &&
+            <div>
+              <p htmlFor="spec">Your spec:</p>
+              <select id="spec" onChange={this.changeSpec}>
+                <option selected disabled>Choose your spec</option>
+                {classNames.map((className) =>
+                  className.specs
+                    .filter(() => className.name === this.state.class)
+                    .map((spec) =>
+                      <option key={spec} value={spec}>{spec}</option>
+                    ))}
+              </select>
+            </div>
+          }
 
           <div>
 
@@ -72,7 +74,7 @@ export default class App extends React.Component {
 
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }
